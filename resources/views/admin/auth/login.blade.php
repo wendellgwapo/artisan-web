@@ -2,51 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin Login</title>
-    <link href="" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Artisan | Log in</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
-
 <body>
-    <section class="vh-100 bg-image" style="background-image: url('');">
-        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-            <div class="container h-100">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                        <div class="card" style="border-radius: 15px;">
-                            <div class="card-body p-5">
-                                <h2 class="text-uppercase text-center mb-5">Admin Login</h2>
+    <div class="hold-transition login-page">
+        <div class="login-box">
+            <!-- /.login-logo -->
+            <div class="card card-outline card-primary">
+                <div class="card-header text-center">
+                    <a href="#" class="h1"><b>Admin</b>Login</a>
+                </div>
+                <div class="card-body">
+                    @if (session('error'))
+                        <div class="text-danger text-center">{{session('error')}}</div>
+                    @endif
 
-                                <form>
-                                    <div class="form-outline mb-4">
-                                        <input type="email" id="form3Example3cg"
-                                            class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example3cg">Your Email</label>
-                                    </div>
+                    @if (session('success'))
+                        <div class="text-success text-center">{{session('success')}}</div>
+                    @endif
 
-                                    <div class="form-outline mb-4">
-                                        <input type="password" id="form3Example4cg"
-                                            class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example4cg">Password</label>
-                                    </div>
+                    <p class="login-box-msg">Please fill in this form to login an account.</p>
 
-                                    <div class="d-flex justify-content-center">
-                                        <button type="button"
-                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Login</button>
-                                    </div>
-                                </form>
-
+                    <form action="{{ route('postLogin') }}" method="post">
+                        @csrf
+                        <div class="input-group mb-1">
+                            <input name="email" type="email" class="form-control" placeholder="Email">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        @error('email')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                        <div class="input-group mb-1">
+                            <input name="password" type="password" class="form-control" placeholder="Password">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        @error('password')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="icheck-primary">
+                                    <input name="remember" type="checkbox" id="remember">
+                                    <label for="remember">
+                                        Remember Me
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                    </form>
                 </div>
+                <!-- /.card-body -->
             </div>
+            <!-- /.card -->
         </div>
-    </section>
-</body>
+        <!-- /.login-box -->
 
+        <!-- jQuery -->
+        <script src="../../plugins/jquery/jquery.min.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../../dist/js/adminlte.min.js"></script>
+    </div>
+</body>
 </html>

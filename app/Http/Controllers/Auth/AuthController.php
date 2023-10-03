@@ -10,8 +10,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function getLogin(){
-        return view('admin.auth.login');
+    public function workerLogin(){
+        return view('worker.auth.login');
+    }
+    public function workerRegister(){
+        return view('worker.auth.register');
     }
     
     public function index()
@@ -59,7 +62,7 @@ class AuthController extends Controller
     {
         Session::flush();
         Auth::logout();
-        return redirect('login_employer');
+        return redirect('login');
     }
     public function page_employer()
     {
