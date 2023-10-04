@@ -27,7 +27,7 @@ use Symfony\Component\HttpKernel\Profiler\Profile;
 */
 
 Route::get('/', function () {
-    return view('layout');
+    return view('welcome');
 });
 
 /********************************************************* Admin */
@@ -63,6 +63,10 @@ Route::get('/worker/register', [AuthController::class, 'workerRegister'])->name(
 
 /********************************************************** test */
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
+
+Route::get('/worker/home', function () {
+    return view('worker.home');
+});
 
 // Route::group(['middleware' => ['auth']], function() {
 //     Route::resource('roles', RoleController::class);
