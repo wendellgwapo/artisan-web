@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Skilled Worker | Registration Page</title>
+    <title>Employer | Registration Page</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -16,7 +16,6 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
-
 <body>
     <!-- Navbar -->
     <nav class=" navbar navbar-expand navbar-light">
@@ -44,7 +43,7 @@
         <div class="register-box">
             <div class="card card-outline card-primary">
                 <div class="card-header text-center">
-                    <a href="#" class="h1"><b>Skilled Worker</b></a>
+                    <a href="#" class="h1"><b>Employer</b></a>
                 </div>
                 <div class="card-body">
                     <p class="login-box-msg">Register a new account</p>
@@ -125,5 +124,4 @@
         <script src="../../dist/js/adminlte.min.js"></script>
     </div>
 </body>
-
 </html>

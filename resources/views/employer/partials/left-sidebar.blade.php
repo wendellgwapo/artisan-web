@@ -19,7 +19,7 @@
                     alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{ auth()->user()->name }}</a>
+                {{-- <a href="#" class="d-block">{{ auth()->user()->name }}</a> --}}
             </div>
         </div>
 
@@ -50,19 +50,19 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item {{$current_route=='users.index'?'menu-open':''}}">
-                    <a href="#" class="nav-link {{$current_route=='users.index'?'active':''}}">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
-                            User Management
+                            Phone Number
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('users.index') }}" class="nav-link {{$current_route=='users.index'?'active':''}}">
+                            <a href="#" class="nav-link">
                                 <i class="far fas fa-user"></i>
-                                <p>Users</p>
+                                <p>0909090</p>
                             </a>
                         </li>
                     </ul>
@@ -71,7 +71,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-play"></i>
                         <p>
-                            Guides and Tutorials
+                            Location
                         </p>
                     </a>
                 </li>
@@ -79,7 +79,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-arrow-up"></i>
                         <p>
-                            Update Category
+                            Job Details
                         </p>
                     </a>
                 </li>
@@ -87,35 +87,10 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-eye"></i>
                         <p>
-                            Monitor System Activity
+                            Review Applicants
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-solid fa-box-open"></i>
-                        <p>
-                            Website Contents
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-solid fa-list"></i>
-                        <p>
-                            Job Category
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-solid fa-user-secret"></i>
-                        <p>
-                            Restrictions
-                        </p>
-                    </a>
-                </li>
-
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

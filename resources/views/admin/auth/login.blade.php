@@ -16,7 +16,36 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
+
 <body>
+    <!-- Navbar -->
+    <nav class=" navbar navbar-expand navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="/" class="nav-link">Artisan</a>
+            </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+            @guest
+                
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="{{ url('register') }}" class="nav-link">register</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="{{ url('login') }}" class="nav-link">login</a>
+                </li>
+            @else
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="{{ url('admin/login') }}" class="nav-link">admin login</a>
+                </li>
+            @endguest
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+    
     <div class="hold-transition login-page">
         <div class="login-box">
             <!-- /.login-logo -->
@@ -26,11 +55,11 @@
                 </div>
                 <div class="card-body">
                     @if (session('error'))
-                        <div class="text-danger text-center">{{session('error')}}</div>
+                        <div class="text-danger text-center">{{ session('error') }}</div>
                     @endif
 
                     @if (session('success'))
-                        <div class="text-success text-center">{{session('success')}}</div>
+                        <div class="text-success text-center">{{ session('success') }}</div>
                     @endif
 
                     <p class="login-box-msg">Please fill in this form to login an account.</p>
@@ -90,4 +119,5 @@
         <script src="../../dist/js/adminlte.min.js"></script>
     </div>
 </body>
+
 </html>

@@ -17,17 +17,17 @@
     <link rel="stylesheet" href="{{ url('dist/css/adminlte.min.css') }}">
 </head>
 
-<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<body class="hold-transition sidebar-mini ">
     <div class="wrapper">
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__wobble" src="{{ url('dist/img/AdminLTELogo.png') }}" alt="ArtisanLogo" height="60"
+            <img class="animation__wobble" src="{{ url('dist/img/ArtisanLogo.png') }}" alt="ArtisanLogo" height="60"
                 width="60">
         </div>
 
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-dark">
+        <nav class="navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -69,17 +69,20 @@
         {{-- @include('worker.partials.left-sidebar') --}}
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+        <div class="content">
             <!-- Content Header (Page header) -->
-
+aaa
+z
             @yield('content-header')
 
-
+bbb
+x
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
                     @yield('body')
-
+ccc
+y
                 </div><!--/. container-fluid -->
             </section>
             <!-- /.content -->
@@ -87,13 +90,13 @@
         <!-- /.content-wrapper -->
 
         <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
+        <aside class="control-sidebar control-sidebar-light">
             <!-- Control sidebar content goes here -->
         </aside>
         <!-- /.control-sidebar -->
 
         <!-- Main Footer -->
-        <footer class="main-footer">
+        <footer class="footer footer-light">
             <strong>Copyright &copy; 2022-present <a href="#">Artisan</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
@@ -121,11 +124,6 @@
     <script src="{{ url('plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
     <!-- ChartJS -->
     <script src="{{ url('plugins/chart.js/Chart.min.js') }}"></script>
-
-    <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard2.js"></script>
 </body>
 
 </html>

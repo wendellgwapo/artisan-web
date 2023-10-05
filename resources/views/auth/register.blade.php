@@ -1,6 +1,3 @@
-{{-- @extends('layout')
-@section('content') --}}
-
 <head>
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
@@ -17,5 +14,3 @@
     <button><a href="worker/register" class="btn">I'm a Skilled Worker</a></button>
     <button><a href="signup_employer" class="btn">I'm an Employer</a></button>
 </div>
-
-{{-- @endsection --}}
